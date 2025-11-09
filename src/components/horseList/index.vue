@@ -47,7 +47,7 @@ const horses = computed(() => store.getters.horses)
 
 .horse-list h2 {
   margin: 0 0 16px 0;
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: #2d3748;
   font-weight: 600;
 }
@@ -63,7 +63,7 @@ const horses = computed(() => store.getters.horses)
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
 }
 
 thead {
@@ -79,7 +79,7 @@ th {
   font-weight: 600;
   border-bottom: 2px solid #cbd5e0;
   color: #4a5568;
-  font-size: 0.8125rem;
+  font-size: 0.8rem;
 }
 
 

@@ -7,7 +7,7 @@
         :key="result.round"
         class="round-section"
       >
-        <h3>{{ getOrdinal(result.round) }} Lap - {{ result.distance }}m</h3>
+        <h3>{{ getRoundNumber(result.round) }} Lap - {{ result.distance }}m</h3>
         <table>
           <thead>
             <tr>
@@ -37,15 +37,10 @@
 <script setup>
 import { computed } from 'vue'
 import { useStore } from 'vuex'
+import { getRoundNumber } from '../../utils'
 
 const store = useStore()
 const raceResults = computed(() => store.getters.raceResults)
-
-function getOrdinal(number) {
-  const suffixes = ['', 'ST', 'ND', 'RD']
-  const v = number % 100
-  return number + (suffixes[(v - 20) % 10] || suffixes[v] || 'TH')
-}
 </script>
 
 <style scoped>
@@ -63,7 +58,7 @@ function getOrdinal(number) {
 
 .race-results h2 {
   margin: 0 0 16px 0;
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: #2f855a;
   font-weight: 600;
   padding: 10px 14px;
@@ -90,7 +85,7 @@ function getOrdinal(number) {
 
 .round-section h3 {
   margin: 0 0 10px 0;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   color: #2d3748;
   background: #edf2f7;
   padding: 6px 10px;
@@ -102,7 +97,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 0;
-  font-size: 0.8125rem;
+  font-size: 0.8rem;
 }
 
 thead {
@@ -138,7 +133,7 @@ tbody tr.winner {
   padding: 30px 20px;
   color: #a0aec0;
   font-style: italic;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   background: #f7fafc;
   border-radius: 6px;
   border: 1px dashed #cbd5e0;

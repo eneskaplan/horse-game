@@ -27,4 +27,19 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+@media (max-width: 1200px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  #app {
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 100vh;
+    height: auto;
+  }
+}
 </style>

@@ -96,6 +96,16 @@
     overflow: hidden;
   }
   
+  @media (max-width: 1200px) {
+    .horse-racing-game {
+      overflow-y: auto;
+      overflow-x: hidden;
+      min-height: 100vh;
+      -webkit-overflow-scrolling: touch;
+      padding: 15px;
+    }
+  }
+  
   .game-header {
     display: flex;
     justify-content: space-between;
@@ -107,6 +117,27 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     flex-shrink: 0;
     border: 1px solid #e2e8f0;
+  }
+  
+  @media (max-width: 1200px) {
+    .game-header {
+      flex-direction: column;
+      gap: 15px;
+      padding: 15px;
+    }
+    
+    .game-header h1 {
+      font-size: 1.25rem;
+    }
+    
+    .controls {
+      width: 100%;
+      flex-direction: column;
+    }
+    
+    .btn {
+      width: 100%;
+    }
   }
   
   .game-header h1 {
@@ -125,7 +156,7 @@
     padding: 10px 20px;
     border: none;
     border-radius: 6px;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -149,7 +180,6 @@
   
   .btn-primary:hover:not(:disabled) {
     background: #3182ce;
-    box-shadow: 0 2px 4px rgba(66, 153, 225, 0.3);
   }
   
   .btn-secondary {
@@ -159,7 +189,6 @@
   
   .btn-secondary:hover:not(:disabled) {
     background: #38a169;
-    box-shadow: 0 2px 4px rgba(72, 187, 120, 0.3);
   }
   
   .game-content {
@@ -226,6 +255,7 @@
       grid-template-columns: 1fr;
       grid-template-rows: auto auto auto;
       height: auto;
+      overflow: visible;
     }
     
     .right-columns {
@@ -235,7 +265,31 @@
     .left-panel,
     .center-panel,
     .right-panel {
-      height: 500px;
+      height: auto;
+      min-height: 500px;
+      overflow: visible;
+    }
+    
+    .left-panel {
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    
+    .center-panel {
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    
+    .right-panel {
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    
+    .program-column,
+    .results-column {
+      overflow-y: auto;
+      overflow-x: hidden;
+      min-height: 300px;
     }
   }
   </style>

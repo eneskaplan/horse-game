@@ -37,7 +37,7 @@
       </div>
     </div>
     <div class="round-info" v-if="currentRound">
-      {{ currentRoundIndex + 1 }}.st Lap {{ currentRound.distance }}m
+      {{ currentRoundIndex + 1 }}st Lap {{ currentRound.distance }}m
     </div>
   </div>
 </template>
@@ -326,11 +326,9 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: left 0.05s linear;
   z-index: 10;
   border: 3px solid #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  will-change: left;
 }
 
 .horse-icon {
@@ -338,14 +336,13 @@ onUnmounted(() => {
   line-height: 1;
 }
 
-
 .finish-line {
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
   width: 100px;
-  background: rgba(255, 0, 0, 0.05);
+  background: rgba(255, 0, 0, 0.20);
   border-left: 3px solid #e53e3e;
   display: flex;
   align-items: center;
@@ -357,7 +354,7 @@ onUnmounted(() => {
   text-orientation: upright;
   font-weight: 700;
   color: #e53e3e;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   letter-spacing: 1px;
 }
 
@@ -368,7 +365,7 @@ onUnmounted(() => {
   border-radius: 6px;
   font-weight: 600;
   color: #2d3748;
-  font-size: 0.9375rem;
+  font-size: 0.9rem;
   border: 1px solid #e2e8f0;
 }
 

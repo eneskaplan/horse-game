@@ -51,7 +51,7 @@ const raceSchedule = computed(() => store.getters.raceSchedule)
 
 .race-program h2 {
   margin: 0 0 16px 0;
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: #2b6cb0;
   font-weight: 600;
   padding: 10px 14px;
@@ -78,7 +78,7 @@ const raceSchedule = computed(() => store.getters.raceSchedule)
 
 .round-section h3 {
   margin: 0 0 10px 0;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   color: #2d3748;
   background: #edf2f7;
   padding: 6px 10px;
@@ -90,7 +90,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 0;
-  font-size: 0.8125rem;
+  font-size: 0.8rem;
 }
 
 thead {
@@ -102,7 +102,7 @@ th {
   padding: 8px 10px;
   text-align: left;
   font-weight: 600;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 }
 
 td {
