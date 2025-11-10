@@ -60,29 +60,6 @@ const horses = computed(() => store.getters.horses)
   -webkit-overflow-scrolling: touch;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.8rem;
-}
-
-thead {
-  background: #edf2f7;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-th {
-  padding: 10px 12px;
-  text-align: left;
-  font-weight: 600;
-  border-bottom: 2px solid #cbd5e0;
-  color: #4a5568;
-  font-size: 0.8rem;
-}
-
-
 .color-indicator {
   display: inline-block;
   width: 14px;

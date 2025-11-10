@@ -85,34 +85,5 @@ const raceSchedule = computed(() => store.getters.raceSchedule)
   font-weight: 600;
   border-radius: 4px;
 }
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 0;
-  font-size: 0.8rem;
-}
-
-thead {
-  background: #4299e1;
-  color: white;
-}
-
-th {
-  padding: 8px 10px;
-  text-align: left;
-  font-weight: 600;
-  font-size: 0.7rem;
-}
-
-td {
-  padding: 8px 10px;
-  border-bottom: 1px solid #e2e8f0;
-  color: #2d3748;
-}
-
-tbody tr:hover {
-  background: #edf2f7;
-}
 </style>
 
