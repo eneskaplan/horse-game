@@ -29,9 +29,9 @@ test.describe('HomePage', () => {
     await expect(generateButton).toBeEnabled();
   });
 
-  test('should disable start/pause button', async ({ page }) => {
+  test('should enable start/pause button', async ({ page }) => {
     const startButton = page.getByRole('button', { name: /START \/ PAUSE/i });
-    await expect(startButton).toBeDisabled();
+    await expect(startButton).toBeEnabled();
   });
 });
 
