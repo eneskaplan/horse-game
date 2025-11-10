@@ -79,6 +79,7 @@ export default createStore({
       }
       const schedule = generateRaceSchedule(state.horses, state.roundDistances)
       commit('SET_RACE_SCHEDULE', schedule)
+      commit('SET_PAUSE_STATUS', false)
       commit('RESET_RACE')
     },
 
