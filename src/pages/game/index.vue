@@ -12,7 +12,7 @@
           </button>
           <button 
             @click="handleStartPause" 
-            :disabled="!canStartRace && !isRacing"
+            :disabled="pauseStatus"
             class="btn btn-secondary"
           >
             START / PAUSE
@@ -56,7 +56,7 @@
   const canGenerateSchedule = computed(() => store.getters.canGenerateSchedule)
   const canStartRace = computed(() => store.getters.canStartRace)
   const isRacing = computed(() => store.getters.isRacing)
-  const isPaused = computed(() => store.getters.isPaused)
+  const pauseStatus = computed(() => store.getters.pauseStatus)
   
   onMounted(() => {
     if (store.getters.horses.length === 0) {

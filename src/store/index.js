@@ -11,7 +11,8 @@ export default createStore({
     isRacing: false,
     isPaused: false,
     horsePositions: {},
-    roundDistances: [1200, 1400, 1600, 1800, 2000, 2200]
+    roundDistances: [1200, 1400, 1600, 1800, 2000, 2200],
+    pauseStatus: false
   },
 
   mutations: {
@@ -43,6 +44,10 @@ export default createStore({
       state.isPaused = value
     },
 
+    SET_PAUSE_STATUS(state, value) {
+      state.pauseStatus = value
+    },
+    
     SET_HORSE_POSITIONS(state, positions) {
       state.horsePositions = { ...positions }
     },
@@ -142,7 +147,8 @@ export default createStore({
     horsePositions: (state) => state.horsePositions,
     roundDistances: (state) => state.roundDistances,
     canStartRace: (state) => state.raceSchedule.length > 0 && !state.isRacing,
-    canGenerateSchedule: (state) => state.horses.length > 0 && !state.isRacing
+    canGenerateSchedule: (state) => state.horses.length > 0 && !state.isRacing,
+    pauseStatus: (state) => state.pauseStatus
   }
 })
 

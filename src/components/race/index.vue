@@ -26,7 +26,7 @@
                 backgroundColor: getColorCode(lane.horse.color)
               }"
             >
-              <span class="horse-icon">🐴</span>
+            <img :src="horseIcon" class="horse-icon" />
             </div>
             <div class="track-line"></div>
           </div>
@@ -47,6 +47,7 @@ import { computed, watch, ref, onUnmounted } from 'vue'
 import { useStore } from 'vuex'
 import { getColorCode } from "../../utils/colors"
 import { calculateRaceResult } from "../../utils/gameLogic"
+import horseIcon2 from '../../assets/horse.svg'
 
 const store = useStore()
 
@@ -115,6 +116,7 @@ watch(isPaused, (paused) => {
 
 function startRoundAnimation() {
   stopAnimation()
+  store.commit('SET_PAUSE_STATUS', true)
 
   const round = currentRound.value
   if (!round) {
@@ -125,7 +127,7 @@ function startRoundAnimation() {
 
   setTimeout(() => {
     showRoundTransition.value = false
-    
+    store.commit('SET_PAUSE_STATUS', false)
     setTimeout(() => {
       activeDistance = roundDistances.value[currentRoundIndex.value]
       activeResult = calculateRaceResult(round.horses, activeDistance)
@@ -199,6 +201,8 @@ function finishRound() {
       position: 100
     })
   })
+
+  store.commit('SET_PAUSE_STATUS', true)
 
   store.dispatch('setRaceResult', {
     round: currentRoundIndex.value + 1,
@@ -332,8 +336,8 @@ onUnmounted(() => {
 }
 
 .horse-icon {
-  font-size: 20px;
-  line-height: 1;
+  width: 25px;
+  height: 25px;
 }
 
 .finish-line {
