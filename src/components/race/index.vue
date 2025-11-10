@@ -47,7 +47,7 @@ import { computed, watch, ref, onUnmounted } from 'vue'
 import { useStore } from 'vuex'
 import { getColorCode } from "../../utils/colors"
 import { calculateRaceResult } from "../../utils/gameLogic"
-import horseIcon2 from '../../assets/horse.svg'
+import horseIcon from '../../assets/horse.svg'
 
 const store = useStore()
 
